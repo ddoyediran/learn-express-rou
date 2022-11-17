@@ -6,7 +6,11 @@ const app = express();
 // import the routes/index.js file
 const userRoutes = require("./routes");
 
+// app.use(express.json);
+// app.use(express.urlencoded({ extended: true }));
+
 app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use(userRoutes);
 
